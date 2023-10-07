@@ -1,0 +1,35 @@
+
+body{
+ font-family:monospace ; /*change le font-style en monospace*/
+}
+h1{
+margin-top: 2em; /* ajoute au titre h1 un espace du haut */
+text-align: center; /* permet d'aligner  h1 au centre */
+border-bottom: solid black 10px; /* permet d'ajout une bordure au formulaire en bas */
+}
+#main{
+padding: 50px; /* permet d'ajouter un espace interieur dans le cadre principal de 50px */ 
+}
+legend{
+text-transform: uppercase; /* permet aux légendres des cadres de s'afficher en majuscule */ 
+}
+label{
+font-weight: bold  ;  /* permet d'afficher les labels en gras  */ 
+float: left;   /* permet de positionner les labels à gauche  */ 
+}
+.cadre-connaissance{
+color: red; /* permet de colorer le text du cadre  connaissance en rouge */ 
+background-color: #c0c0FF; /* permet de colorer l'arriere plan du cadre  */ 
+}
+
+.input{
+display: block; /* permet de positionner les inputs en bloc*/
+margin-left: 250px; /* permet de ajouter un espace a gauche des inputs */ 
+}
+.phrase{
+margin-top: 2em; /* permet d'ajouter un espace en haut */
+border-top: 5px blue solid; /*permet d'ajouter la barre supérieur*/
+border-bottom:5px blue solid ; /*permet d'ajouter la barre inférieur*/
+text-align: center;  /*permet d'aligner le text au centre*/
+font-size: x-small;  /*permet de changer la taille de police */
+}

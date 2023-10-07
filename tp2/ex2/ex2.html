@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Style2.css">
+</head>
+<body>
+    <h1> Mon premier formualire html </h1>
+    <fieldset id="main">
+     <legend>Vos données personnelles </legend>
+
+    <form>
+      <label>nom</label> 
+      <input class="input" placeholder="votre nom" type="text">
+      <label>prénom</label>
+      <input class="input" placeholder="votre prénom" type="text">
+      <label>Date de naissance</label>
+      <input class="input" type="date">
+       <fieldset>
+        <legend>lieu de naissance</legend>
+        <input type="radio">seine-saint-dent
+        <input type="radio">reste du monde
+      </fieldset> 
+      <br>  
+
+      <label>Adresse postale</label>
+      <textarea placeholder="votre adresse" rows="2" cols="30"></textarea>
+      <br>
+
+        <label>code postal</label>
+        <input class="input" placeholder="votre code postal" type="text">
+        <label>adresse electronique</label>
+        <input class="input" placeholder="votre adresse electronique" type="email">
+        <label>page  personnelle </label>
+        <input class="input" placeholder="votre page personnelle " type="url">
+        <label>telephone portable </label>
+        <input class="input" placeholder="votre numero " type="text">
+        <br> 
+      
+      
+        <label>Semestre</label></td>
+        <select>
+            <option>s1</option>
+            <option>s2</option>
+            <option>s3</option>
+            <option>s4</option>
+        </select></td>
+       <br>
+      
+        <label>Niveau en html </label>
+        <input type="range" min="0" max="10" step="1">
+      <fieldset class="cadre-connaissance">        
+        <legend>connaissances </legend>
+        <input  type="checkbox">html
+        <input type="checkbox">css
+        <input type="checkbox">formualire
+        <input type="checkbox">javascript
+      </fieldset>
+
+        <input type="submit">
+    
+     </fieldset>
+
+    </form>
+    <footer class="phrase">
+      <p >Bilel Bzeouich </p>
+    </footer>
+</body>
+</html>
