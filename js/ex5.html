@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Questions</title>
+</head>
+<body>
+
+<form id="quizForm">
+    <h3>Question 1: Quelle est la capitale de la France?</h3>
+    <label><input type="radio" name="q1" value="Paris"> Paris</label>
+    <label><input type="radio" name="q1" value="Berlin"> Berlin</label>
+    <label><input type="radio" name="q1" value="Londres"> Londres</label>
+
+    <h3>Question 2: Quelle est la couleur du ciel?</h3>
+    <label><input type="radio" name="q2" value="Bleu"> Bleu</label>
+    <label><input type="radio" name="q2" value="Rouge"> Rouge</label>
+    <label><input type="radio" name="q2" value="Vert"> Vert</label>
+
+    <h3>Question 3: Quel est le résultat de 2 + 2?</h3>
+    <label><input type="radio" name="q3" value="3"> 3</label>
+    <label><input type="radio" name="q3" value="4"> 4</label>
+    <label><input type="radio" name="q3" value="5"> 5</label>
+
+    <br>
+    <button type="button" onclick="ScoreFinal()">Score</button>
+</form>
+
+<script>
+    // 2. Déclaration des tableaux RC (Réponses Correctes) et RU (Réponses de l'Utilisateur)
+    var RC = ["Paris", "Bleu", "4"];
+    var RU = [];
+
+    // 3. Fonction pour enregistrer la réponse de l'utilisateur
+    function EnregistrerReponse(questionIndex, reponse) {
+        RU[questionIndex] = reponse;
+    }
+
+    // 4. Fonction pour calculer et afficher le score final
+    function ScoreFinal() {
+        var score = 0;
+
+        // Comparer les réponses de l'utilisateur avec les réponses correctes
+        for (var i = 0; i < RC.length; i++) {
+            if (RU[i] === RC[i]) {
+                score++;
+            }
+        }
+
+        // Afficher le score dans une boîte de dialogue
+        alert("Votre score est " + score + "/" + RC.length + " !");
+    }
+</script>
+
+</body>
+</html>

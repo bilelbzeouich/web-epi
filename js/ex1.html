@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personnaliser la couleur de fond</title>
+</head>
+<body>
+
+<script>
+    // 1. Créer le tableau couleur
+    var couleurs = ["rouge", "jaune", "vert", "bleu", "blanc", "violet", "rose", "orange"];
+
+    // 2. Créer le tableau color
+    var colors = ["red", "yellow", "green", "blue", "white", "purple", "pink", "orange"];
+
+    // 3. Demander à l'utilisateur de taper le nom d'une couleur de fond.
+    var choixUtilisateur = prompt("Veuillez taper le nom d'une couleur de fond parmi : " + couleurs.join(", "));
+
+    // 4. Changer la couleur de fond selon le choix de l'utilisateur en utilisant la propriété bgColor de l'objet document HTML JS.
+    var indexCouleur = couleurs.indexOf(choixUtilisateur.toLowerCase());
+
+    if (indexCouleur !== -1) {
+        var couleurSelectionnee = colors[indexCouleur];
+        document.body.style.backgroundColor = couleurSelectionnee;
+        alert("La couleur de fond a été changée en " + choixUtilisateur);
+    } else {
+        alert("La couleur spécifiée n'est pas dans la liste.");
+    }
+</script>
+
+</body>
+</html>

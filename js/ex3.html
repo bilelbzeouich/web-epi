@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul de Prix</title>
+</head>
+<body>
+
+<script>
+    // 1. Fonction pour calculer le prix global, le prix hors taxe, la TVA et le TTC
+    function Calcul(prixUnitaire, quantite) {
+        var prixGlobal = quantite * prixUnitaire;
+        var prixHorsTaxe = prixGlobal / 1.2;
+        var tva = prixHorsTaxe * 0.2;
+        var ttc = prixHorsTaxe + tva;
+
+        // Affichage sous forme de tableau
+        document.write("<table border='1'>");
+        document.write("<tr><th>P U</th><th>Quantité</th><th>Prix global</th><th>Hors taxe</th><th>TVA</th><th>TTC</th></tr>");
+        document.write("<tr><td>" + prixUnitaire + "</td><td>" + quantite + "</td><td>" + prixGlobal.toFixed(2) + "</td><td>" + prixHorsTaxe.toFixed(2) + "</td><td>" + tva.toFixed(2) + "</td><td>" + ttc.toFixed(2) + "</td></tr>");
+        document.write("</table>");
+    }
+
+    // 2. Récupération des données de l'utilisateur
+    var prixUnitaire = parseFloat(prompt("Entrez le prix unitaire du produit :"));
+    var quantite = parseInt(prompt("Entrez la quantité du produit :"));
+
+    // 3. Appel de la fonction
+    if (!isNaN(prixUnitaire) && !isNaN(quantite)) {
+        Calcul(prixUnitaire, quantite);
+    } else {
+        alert("Veuillez entrer des valeurs numériques valides.");
+    }
+</script>
+
+</body>
+</html>
