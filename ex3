@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire sur JavaScript</title>
+</head>
+<body>
+    <form id="questionnaire">
+        <p>Répondez aux questions de ce test, puis cliquez sur le bouton Score pour voire votre résultat.</p>
+        <ol>
+            <li>
+                L'objet Form contient deux méthodes, submit() et:
+                <input type="radio" id="resubmit" name="question1" value="resubmit" checked>
+                <label for="resubmit">resubmit</label>
+                <input type="radio" id="close" name="question1" value="close">
+                <label for="close">close</label>
+                <input type="radio" id="reset" name="question1" value="reset">
+                <label for="reset">reset</label>
+            </li>
+            <li>
+                Dans une liste déroulante, la propriété qui donne l'index de la valeur sélectionnée est:
+                <input type="radio" id="options" name="question2" value="options" checked>
+                <label for="options">options</label>
+                <input type="radio" id="selectedIndex" name="question2" value="selectedIndex">
+                <label for="selectedIndex">selectedIndex</label>
+                <input type="radio" id="innerHTML" name="question2" value="innerHTML">
+                <label for="innerHTML">innerHTML</label>
+            </li>
+            <li>
+                Pour récupérer un élément en utilisant son identifiant on utilise la méthode:
+                <input type="radio" id="getElementById" name="question3" value="getElementById" checked>
+                <label for="getElementById">getElementById</label>
+                <input type="radio" id="getElementId" name="question3" value="getElementId">
+                <label for="getElementId">getElementId</label>
+                <input type="radio" id="getElementByID" name="question3" value="getElementByID">
+                <label for="getElementByID">getElementByID</label>
+            </li>
+        </ol>
+        <button type="button" onclick="ScoreFinal()">Score</button>
+    </form>
+    <script>
+        let RC = ["resubmit", "selectedIndex", "getElementById"]; // Réponses correctes
+        let RU = []; // Réponses de l'utilisateur
+
+        function EnregistrerReponse(i, rep) {
+            RU[i] = rep;
+        }
+
+        function ScoreFinal() {
+            let score = 0;
+            for (let i = 0; i < RU.length; i++) {
+                if (RU[i] === RC[i]) {
+                    score++;
+                }
+            }
+
+            alert(`Votre score est ${score} / 3!`);
+        }
+    </script>
+</body>
+</html>
