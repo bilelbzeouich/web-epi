@@ -1,0 +1,60 @@
+qcm : 
+
+1/qyelle fonction javascript permet de retourner la premiere occurence d'un element html passe en parametre 
+getElementById
+2/
+pour creer un nouvel element textuel on utilise la methode : 
+
+3/
+quelle  foncton permet de recupere un elemnt a travers son nom : 
+
+
+4/
+quelle fonction ermet de recuperer un element a travers son id ; 
+
+5/
+la methode childnodes retourne ; 
+
+6/
+quel evenement permet de declencher lexcution d'un code lorsqu'on cilque en dehors d'un element ; 
+
+7/
+quelle propriete permet de desactiver un champ
+
+8/ 
+l'attribut utilise avec levenement de frapper sur une touche du clavier ; 
+
+
+9/
+pour recupere le contenu d'un element html on utilise la propriete 
+
+/10
+pour recuperer du texte brut sans acune balise html on utilise la propriete ?
+
+1. Réponse : `getElementById`
+2. Réponse : `createElement`
+3. Réponse : `getElementsByName`
+4. Réponse : `getElementById`
+5. Réponse : Une collection d'objets représentant les nœuds enfants d'un élément dans l'ordre, sous la forme d'une NodeList.
+6. Réponse : `blur`
+7. Réponse : `disabled`
+8. Réponse : `keyCode` (à noter que `keyCode` est maintenant obsolète et on préfère utiliser `key` ou `code` avec les événements de clavier)
+9. Réponse : `innerHTML`
+10. Réponse : `textContent`
+
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" type="text/css" href="styleExamen.css">
+</head>
+<body>
+ <form action="/submitForm" method="post">
+    <fieldset>
+      <legend style="color: #a0522d;">Coordonnées</legend>
+      <input type="text" name="email" placeholder="Email" required>
+      <input type="text" name="commentaires" placeholder="Commentaires" required>
+      <input type="submit" value="Envoyer">
+    </fieldset>
+ </form>
+</body>
+</html>
